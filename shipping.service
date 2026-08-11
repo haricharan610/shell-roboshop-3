@@ -3,8 +3,9 @@ Description=Shipping Service
 
 [Service]
 User=roboshop
-Environment=CART_ENDPOINT=cart.nadalla.store:8083
-Environment=DB_HOST=mysql.nadalla.store
+Environment=CART_ENDPOINT=localhost:8082
+Environment=DB_HOST=localhost
+Environment=SHIPPING_SERVER_PORT=8083
 ExecStart=/bin/java -jar /app/shipping.jar
 SyslogIdentifier=shipping
 
