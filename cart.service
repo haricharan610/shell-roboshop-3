@@ -1,0 +1,7 @@
+[Service]
+User=roboshop
+Environment=REDIS_URL='redis://redis.nadalla.store:6379'
+Environment=CATALOGUE_URL='http://catalogue.nadalla.store:8080'
+Environment=CART_SERVER_PORT=8082
+ExecStart=/bin/node /app/server.js
+SyslogIdentifier=cart
