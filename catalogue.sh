@@ -5,7 +5,7 @@ app_name=catalogue
 nodejs_setup
 app_setup
 
-cp catalogue.service /etc/systemd/system/catalogue.service
+cp $SCRIPT_DIR/catalogue.service /etc/systemd/system/catalogue.service
 VALIDATE $? "copying catalogue service"
 
 systemctl daemon-reload
