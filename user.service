@@ -2,7 +2,7 @@
 Description = User Service
 [Service]
 User=roboshop
-Environment=USER_SERVER_PORT=8081
+Environment=USER_SERVER_PORT=8083
 // highlight-start
 Environment=REDIS_URL='redis://redis.nadalla.store:6379'
 Environment=MONGO_URL="mongodb://mongodb.nadalla.store:27017/users"

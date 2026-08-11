@@ -1,14 +1,7 @@
-[Unit]
-Description = Catalogue Service
-
 [Service]
 User=roboshop
 Environment=MONGO=true
-// highlight-start
 Environment=MONGO_URL="mongodb://mongodb.nadalla.store:27017/catalogue"
-// highlight-end
+Environment=CATALOGUE_SERVER_PORT=8081
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=catalogue
-
-[Install]
-WantedBy=multi-user.target
