@@ -3,13 +3,13 @@
 USERID=$(id -u)
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=$(3:-14)
+DAYS=${3:-14}
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 LOGS_FOLDER="/var/log/shellscript-logs"
-SCRIPT_NAME=$(echo $0 | cut "." -fi)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/backup.log"
 
 mkdir -p $LOGS_FOLDER
